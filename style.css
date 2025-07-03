@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+
+:root {
+    --cor-principal: #0d1b2a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*clip-path: polygon(0 0, 0% 100%, 100% 0);  canto da logo*/
+/*clip-path: polygon(100% 100%, 0% 100%, 100% 0); na pesquisa*/
+
+body {
+    font-family: 'Kelly Slab', cursive;
+     height: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: "header header" 
+                         "main main"
+                         "footer footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #3b2b2b;
+     height: 20vh;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+    width: 100vw;     
+    height: 30.3vh; 
+}
+
+.copyright {
+    background: var(--cor-principal);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 9vh;
+    color: white;
+    font-size: 2.22vh;
+}
+

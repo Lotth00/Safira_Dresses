@@ -15,7 +15,7 @@
 
 body {
     font-family: 'Kelly Slab', cursive;
-     height: 100%;
+    height: 100%;
 }
 
 .container {
@@ -28,13 +28,134 @@ body {
 }
 
 header {
-    grid-area: header;
-    background-color: #3b2b2b;
-     height: 20vh;
+     grid-area: header;
+     height: 13.43vh;
 }
+
+.fundo {
+    background-color: var(--cor-principal);
+    height: 8.78vh;
+    z-index: -1;
+}
+
+.barra-pesquisa {
+  position: absolute;
+  top: 2.78vh;
+  left: 0;
+  width: 100%;
+  height: 4.33vh;
+  display: flex;
+  justify-content: end;     
+}
+
+.barra-pesquisa input[type="text"] {
+  width: 90%;           
+  height: 100%;
+  padding: 0 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0 5px 5px 0;
+  outline: none;
+  margin-right: 26.11vh;
+}
+
+.logo-fundo {
+    position: absolute;
+    display: flex;
+    top: 2.78vh;
+    right: 82%;
+    width: 18.59vw;
+    height: 18.27vh;
+    justify-content: start;
+    background-color: var(--cor-principal);
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+}
+
+.logo {
+    position: absolute;
+    top: -0.1vh;
+    height: 14vh;
+    left: 12.5vh;
+    overflow: hidden;
+}
+
+.menu {
+    margin-left:  7.81vw;
+    margin-right: 7.14vw;
+
+}
+
+ul {
+    
+    list-style: none;
+    background-color: white;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    text-align: start;
+    font-size: 1.25rem;
+}
+
+ul li input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+}
+
+ul li label {
+    cursor: pointer;
+    display: block;
+    color: black;
+    text-decoration: none;
+    text-align: start;
+    font-size: 1.25rem;
+    padding-left: 13.89vh;
+    
+}
+
+ul li ul.submenu {
+    margin-left: 17vh;
+    padding: 2.19vh;
+    width: 150%;
+    max-width: 205px;
+    background: white;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li ul.submenu li {
+    display: block;
+}
+
+ul li:not(.opcaomenu):hover{
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+ul li:hover ul.submenu {
+    display: block;
+}
+
+ul li input[type="checkbox"] + label + ul.submenu {
+    display: none;
+}
+
+ul li input[type="checkbox"]:checked + label + ul.submenu {
+  display: block;
+}
+
+
 
 main {
     grid-area: main;
+    background-color: tomato;
 }
 
 footer {
@@ -52,5 +173,13 @@ footer {
     height: 9vh;
     color: white;
     font-size: 2.22vh;
+}
+
+@media (max-width: 768px) {
+    ul li a, ul li label, ul li ul.submenu {
+        font-size: 1.85vh;
+    }
+
+
 }
 

@@ -29,7 +29,8 @@ body {
 
 header {
      grid-area: header;
-     height: 13.43vh;
+     height: 13.7vh;
+     z-index: 2;
 }
 
 .fundo {
@@ -56,7 +57,7 @@ header {
   border: 1px solid #ccc;
   border-radius: 0 5px 5px 0;
   outline: none;
-  margin-right: 31.4vh;
+  margin-right: 14.6vw;
   padding-left: 18vw;
   padding-right: 3vw;
 }
@@ -77,7 +78,7 @@ header {
     position: absolute;
     top: -0.1vh;
     height: 14vh;
-    left: 9.5vh;
+    left: 4.5vw;
     overflow: hidden;
 }
 
@@ -90,14 +91,14 @@ header {
 i {
   position: absolute;
   color: #727070;
-  font-size: 1.1rem;
+  font-size: 1.4vw;
   margin-top: 1vh;
-  margin-left: 1.35vh;
+  margin-left: 0.5vw;
 }
 
 ul li input[type="checkbox"]:checked + label i {
   transform: rotate(180deg);
-  margin-top: 0.3vh;
+  margin-top: 0.4vh;
 }
 
 ul {
@@ -118,7 +119,7 @@ ul li a {
     text-decoration: none;
     text-align: start;
     font-size: 1.25rem;
-    padding-left: 1vh;
+    padding-left: 0.5vw;
 }
 
 ul li input[type="checkbox"] {
@@ -130,25 +131,25 @@ ul li label:not(.opcaoC) {
     cursor: pointer;
     display: block;
     text-decoration: none;
-    margin-left: 22.6vh;
+    margin-left: 11vw;
     color: #383838;
 }
 
 .opcaoQ {
-    font-size: 3.1vh;
+    font-size: 1.5vw;
 }
 
 .opcaoC {
-    margin-left: 13.89vh;
+    margin-left: 6vw;
     cursor: pointer;
     display: block;
     text-decoration: none;
-    font-size: 3.1vh;
+    font-size: 1.5vw;
     color: #383838;
 }
 
 ul li ul.submenu {
-    margin-left: 17vh;
+    margin-left: 7.8vw;
     border-radius: 0 0 5px 5px;
     width: 150%;
     line-height: 6.5vh;
@@ -160,15 +161,15 @@ ul li ul.submenu {
 }
 
 #acessorios {
-  margin-left: 26vh;
+    margin-left: 12vw;
 }
 
 #promocoes {
-    margin-left: 13vh;
+    margin-left: 7.28vw;
 }
 
 #colecoes {
-    margin-left: 26vh;
+    margin-left: 12vw;
 }
 
 ul li ul.submenu li {
@@ -193,7 +194,69 @@ ul li input[type="checkbox"]:checked + label + ul.submenu {
 
 main {
     grid-area: main;
-    background: var(--cor-de-fundo) ;
+    background: var(--cor-de-fundo);
+}
+
+.banner-principal {
+  top: 0.4vh;
+  width: 100%;
+  height: 35vw;
+  overflow: hidden;
+  position: relative;
+  background-color: #0000007e;
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fadeSlide 15s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.banner1 {
+  background-image: url(IMG/banners/banner1.png);
+  animation-delay: 0s;
+}
+
+.banner2 {
+  background-image: url(IMG/banners/banner2.png);
+  animation-delay: 5s;
+}
+
+.banner3 {
+  background-image: url(IMG/banners/banner3.png);
+  animation-delay: 10s;
+}
+
+@keyframes fadeSlide {
+  0%   { opacity: 0; }   /* invisível */
+  10%  { opacity: 1; }   /* começa a aparecer */
+  30%  { opacity: 1; }   /* ainda visível */
+  50%  { opacity: 0; }  
+  100% { opacity: 0; }   /* invisível de novo */
+}
+
+.produtos-geral {
+  box-sizing: border-box;
+  margin-left: 18px;
+  right: 18px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.P {
+  display: inline-block;
+  background-color: white;
+  background-size: 22.6vw;
 }
 
 footer {
@@ -216,7 +279,7 @@ footer {
 @media (max-width: 768px) {
    
   header {
-     height: 9.5vh;
+     height: 9.7vh;
   }
 
   .fundo {
@@ -228,65 +291,68 @@ footer {
   }
 
   i {
-    position: static;
-    font-size: 1.3vh;
-    margin-left: 0;
+    font-size: 1.7vw;
+    position: absolute;
+    margin-top: 0.6vh;
+    margin-left: 1.35vw;
   }
 
   ul li input[type="checkbox"]:checked + label i {
   transform: rotate(180deg);
-  margin-top: -2vh;
-}
+  margin-top: 0;
+  }
 
   .barra-pesquisa input[type="text"] {          
     height: 87%;
-    max-width: 85vw;
+    max-width: 100%;
     padding: 0 0.6rem;
     font-size: 0.6rem;
     margin-right: 17vw;
-    padding-left: 25vw;
-    padding-right: 6vw;
+    padding: 0 4vw 0 24vw;
+    box-sizing: border-box;
   }
 
   ul {
     margin-top: 0;
   }
 
-  ul li a {
-    font-size: 1.4vh;
-    margin-left: 1vh;
-    padding-left: 0.5vh;
-    height: 4vh;
+  ul li {
+     top: -0.3vh;
   }
-    
+
+  ul li a {
+    font-size: 2.6vw;
+    margin-left: 1vh;
+    padding-left: 0.5vw;
+    height: 6vh;
+  }
+
   .opcaoC {
-    font-size: 1.4vh;
-    margin-left: 13vh;
+    font-size: 2.1vw;
+    margin-left: 7.31vw;
   }
 
   .opcaoQ {
-    font-size: 1.4vh;
-    margin-left: 0;
+    font-size: 2.1vw;
   }
 
   #categorias {
-    margin-left: 13vh;
+    margin-left: 10vw;
     line-height: 4.5vh;
-    max-width: 120px;
+    max-width: 27vw;
   }
 
   #promocoes {
-    margin-left: -5vh;
+    margin-left: -5vw;
     line-height: 4.5vh;
-    max-width: 120px;
+    width: 27vw;
   }
 
   #colecoes {
     margin-left: 0;
     line-height: 4.5vh;
-    width: 17vh;
+    width: 27vw;
   }
-
 
   ul li ul.submenu:not(#categorias, #promocoes, #colecoes) {
     margin-left: 0;
@@ -295,29 +361,103 @@ footer {
   }
 
   ul li label:not(.opcaoC) {
-  margin-left: 0.3vh;
+    margin-left: 7vw;
   }
 
   .logo-fundo {
     top: 0;
     left: 0;
-    width: 30vw;
-    height: 12vh;
+    width: 27vw;
+    height: 13vh;
   }
 
   .logo {
     height: 9vh;
-    left: 0.2vh;
+    left: 5.4vw;
     top: 0.6vh;
   }
 
   .menu {
-    margin-left: 2vw;
-    margin-right: 2vw;
+    margin-left: 1vw;
+    margin-right: 3.4vw;
   }
 
+  .banner-principal {
+    height: 35vw;
+  }
+  
   .copyright {
     font-size: 1.8vh;
     padding: 1vh;
   }
+}
+
+@media (max-width: 480px) {
+
+  header {
+     height: 8.5vh;
+  }
+
+  .menu {
+    margin-right: 3.9vw;
+  }
+
+  .fundo {
+    height: 5.7vh;
+  }
+
+  .logo {
+    height: 8vh;
+    left: 1.8vw;
+    top: 0.6vh;
+  }
+
+  .logo-fundo {
+    width: 30vw;
+    height: 10vh;
+  }
+
+  .barra-pesquisa input[type="text"] {          
+    height: 70%;
+  }
+
+  ul li {
+     top: -0.5vh;
+  }
+
+  ul li a {
+    font-size: 3vw;
+    margin-left: 1vh;
+    padding-left: 0.5vh;
+    height: 7vw;
+  }
+
+  .opcaoC {
+    font-size: 2.5vw;
+  }
+
+  .opcaoQ {
+    font-size: 2.5vw;
+  }
+
+  ul li label:not(.opcaoC) {
+    margin-left: 3.4vw;
+  }
+
+  i {
+    font-size: 2.2vw;
+    margin-top: 0.5vh;
+    margin-left: 1vw;
+  }
+
+  ul li input[type="checkbox"]:checked + label i {
+  transform: rotate(180deg);
+  margin-top: 0.3vh;
+}
+
+.copyright {
+    font-size: 1.5vh;
+    padding: 0;
+  }
+
 }

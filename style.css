@@ -2,6 +2,7 @@
 
 :root {
     --cor-principal: #0d1b2a;
+    --cor-de-fundo: linear-gradient(45deg, #CDCEFB, #B3B4D2);
 }
 
 * {
@@ -10,12 +11,10 @@
     padding: 0;
 }
 
-/*clip-path: polygon(0 0, 0% 100%, 100% 0);  canto da logo*/
-/*clip-path: polygon(100% 100%, 0% 100%, 100% 0); na pesquisa*/
-
 body {
     font-family: 'Kelly Slab', cursive;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .container {
@@ -25,6 +24,7 @@ body {
                          "footer footer";
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 header {
@@ -56,7 +56,9 @@ header {
   border: 1px solid #ccc;
   border-radius: 0 5px 5px 0;
   outline: none;
-  margin-right: 26.11vh;
+  margin-right: 31.4vh;
+  padding-left: 18vw;
+  padding-right: 3vw;
 }
 
 .logo-fundo {
@@ -65,7 +67,7 @@ header {
     top: 2.78vh;
     right: 82%;
     width: 18.59vw;
-    height: 18.27vh;
+    height: 15vh;
     justify-content: start;
     background-color: var(--cor-principal);
     clip-path: polygon(0 0, 0% 100%, 100% 0);
@@ -75,20 +77,34 @@ header {
     position: absolute;
     top: -0.1vh;
     height: 14vh;
-    left: 12.5vh;
+    left: 9.5vh;
     overflow: hidden;
 }
 
 .menu {
     margin-left:  7.81vw;
     margin-right: 7.14vw;
+    white-space: nowrap;
+}
 
+i {
+  position: absolute;
+  color: #727070;
+  font-size: 1.1rem;
+  margin-top: 1vh;
+  margin-left: 1.35vh;
+}
+
+ul li input[type="checkbox"]:checked + label i {
+  transform: rotate(180deg);
+  margin-top: 0.3vh;
 }
 
 ul {
-    
     list-style: none;
     background-color: white;
+    margin-top: 0.3vh;
+    text-align: end;
 }
 
 ul li {
@@ -98,10 +114,11 @@ ul li {
 
 ul li a {
     display: block;
-    color: black;
+    color: #4D4D4D;
     text-decoration: none;
     text-align: start;
     font-size: 1.25rem;
+    padding-left: 1vh;
 }
 
 ul li input[type="checkbox"] {
@@ -109,26 +126,49 @@ ul li input[type="checkbox"] {
     display: none;
 }
 
-ul li label {
+ul li label:not(.opcaoC) {
     cursor: pointer;
     display: block;
-    color: black;
     text-decoration: none;
-    text-align: start;
-    font-size: 1.25rem;
-    padding-left: 13.89vh;
-    
+    margin-left: 22.6vh;
+    color: #383838;
+}
+
+.opcaoQ {
+    font-size: 3.1vh;
+}
+
+.opcaoC {
+    margin-left: 13.89vh;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    font-size: 3.1vh;
+    color: #383838;
 }
 
 ul li ul.submenu {
     margin-left: 17vh;
-    padding: 2.19vh;
+    border-radius: 0 0 5px 5px;
     width: 150%;
+    line-height: 6.5vh;
     max-width: 205px;
     background: white;
     position: absolute;
     z-index: 999;
     display: none;
+}
+
+#acessorios {
+  margin-left: 26vh;
+}
+
+#promocoes {
+    margin-left: 13vh;
+}
+
+#colecoes {
+    margin-left: 26vh;
 }
 
 ul li ul.submenu li {
@@ -151,11 +191,9 @@ ul li input[type="checkbox"]:checked + label + ul.submenu {
   display: block;
 }
 
-
-
 main {
     grid-area: main;
-    background-color: tomato;
+    background: var(--cor-de-fundo) ;
 }
 
 footer {
@@ -176,10 +214,110 @@ footer {
 }
 
 @media (max-width: 768px) {
-    ul li a, ul li label, ul li ul.submenu {
-        font-size: 1.85vh;
-    }
+   
+  header {
+     height: 9.5vh;
+  }
 
+  .fundo {
+    height: 6.3vh;
+  }
 
+  .barra-pesquisa {
+    top: 1.5vh;   
+  }
+
+  i {
+    position: static;
+    font-size: 1.3vh;
+    margin-left: 0;
+  }
+
+  ul li input[type="checkbox"]:checked + label i {
+  transform: rotate(180deg);
+  margin-top: -2vh;
 }
 
+  .barra-pesquisa input[type="text"] {          
+    height: 87%;
+    max-width: 85vw;
+    padding: 0 0.6rem;
+    font-size: 0.6rem;
+    margin-right: 17vw;
+    padding-left: 25vw;
+    padding-right: 6vw;
+  }
+
+  ul {
+    margin-top: 0;
+  }
+
+  ul li a {
+    font-size: 1.4vh;
+    margin-left: 1vh;
+    padding-left: 0.5vh;
+    height: 4vh;
+  }
+    
+  .opcaoC {
+    font-size: 1.4vh;
+    margin-left: 13vh;
+  }
+
+  .opcaoQ {
+    font-size: 1.4vh;
+    margin-left: 0;
+  }
+
+  #categorias {
+    margin-left: 13vh;
+    line-height: 4.5vh;
+    max-width: 120px;
+  }
+
+  #promocoes {
+    margin-left: -5vh;
+    line-height: 4.5vh;
+    max-width: 120px;
+  }
+
+  #colecoes {
+    margin-left: 0;
+    line-height: 4.5vh;
+    width: 17vh;
+  }
+
+
+  ul li ul.submenu:not(#categorias, #promocoes, #colecoes) {
+    margin-left: 0;
+    line-height: 4.5vh;
+    max-width: 120px;
+  }
+
+  ul li label:not(.opcaoC) {
+  margin-left: 0.3vh;
+  }
+
+  .logo-fundo {
+    top: 0;
+    left: 0;
+    width: 30vw;
+    height: 12vh;
+  }
+
+  .logo {
+    height: 9vh;
+    left: 0.2vh;
+    top: 0.6vh;
+  }
+
+  .menu {
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  .copyright {
+    font-size: 1.8vh;
+    padding: 1vh;
+  }
+}

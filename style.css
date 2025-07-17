@@ -22,12 +22,11 @@ html, body {
     grid-template-areas: "header header" 
                          "main main"
                          "footer footer";
-    grid-template-rows: auto 1fr auto;
     min-height: 100vh;
-    overflow-x: hidden;
     grid-template-columns: auto 1fr auto;
 }
 
+/*Cabeçalho igual para todas as paginas*/
 
 header {
      grid-area: header;
@@ -52,7 +51,7 @@ header {
 
 .barra-pesquisa {
   position: absolute;
-  top: 2.78vh;
+  top: 2.78vmin;
   left: 0;
   width: 100%;
   height: 4.33vh;
@@ -63,41 +62,42 @@ header {
 .barra-pesquisa input[type="text"] {
   width: calc(100% - 21vw);          
   height: 100%;
-  padding: 0 1rem;
-  font-size: 1rem;
+  font-size: 1.2vmax;
   border: 1px solid #ccc;
   border-radius: 0 5px 5px 0;
   outline: none;
-  margin-right: 14.6vw;
-  padding-left: 18vw;
+  margin-right: 14.6vmax;
+  padding-left: 12vw;
   padding-right: 3vw;
 }
 
 .logo-fundo {
-    position: absolute;
-    display: flex;
-    top: 2.78vh;
-    right: 82%;
-    width: 18.59vw;
-    height: 15vh;
-    justify-content: start;
-    background-color: var(--cor-principal);
-    clip-path: polygon(0 0, 0% 100%, 100% 0);
+  position: absolute;
+  display: flex;
+  top: 2.78vmin;
+  right: 82%;
+  width: 18.59vw;
+  height: 15vmin;
+  justify-content: start;
+  background-color: var(--cor-principal);
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
 }
 
 .logo {
-    position: absolute;
-    top: -0.1vh;
-    height: 14vh;
-    left: 4.5vw;
-    overflow: hidden;
+  position: absolute;
+  height: 14vmin;
+  left: 4.5vmax;
+  overflow: hidden;
 }
 
+/*Parte do Menu*/
+
 .menu {
-    margin-top: 9vh;
-    margin-left:  7.81vw;
-    margin-right: 7.14vw;
+    margin-top: 9.3vmin;
+    margin-left:  7.81vmax;
+    margin-right: 7.14vmax;
     white-space: nowrap;
+    max-width: 100%;
 }
 
 i {
@@ -160,6 +160,8 @@ ul li label:not(.opcaoC) {
     color: #383838;
 }
 
+/*Parte do Submenu*/
+
 ul li ul.submenu {
     margin-left: 7.8vw;
     border-radius: 0 0 5px 5px;
@@ -172,16 +174,12 @@ ul li ul.submenu {
     display: none;
 }
 
-#acessorios {
+#acessorios, #colecoes {
     margin-left: 12vw;
 }
 
 #promocoes {
     margin-left: 7.28vw;
-}
-
-#colecoes {
-    margin-left: 12vw;
 }
 
 ul li ul.submenu li {
@@ -204,11 +202,16 @@ ul li input[type="checkbox"]:checked + label + ul.submenu {
   display: block;
 }
 
+/*Fim de Cabeçalho*/
+
+/*Main: aqui é diferente para cada pagina, porém o mais usado são o layout dos produtos.*/
+
 main {
     grid-area: main;
     background: var(--cor-de-fundo);
 }
 
+/*Parte do primeiro banner que direciona para outras paginas*/
 .banner-principal {
   top: 0.4vh;
   width: 100%;
@@ -255,6 +258,8 @@ main {
   100% { opacity: 0; }   /* invisível de novo */
 }
 
+/*Parte dos produtos*/
+
 .separar {
   background-color: white;
   height: 1.4vh;
@@ -262,8 +267,6 @@ main {
 }
 
 .produtos-geral {
-  margin-left: 1.25vw;
-  margin-right: 2.5vw;
   margin-top: 5vh;
   justify-items: center;
 }
@@ -283,39 +286,39 @@ h1 {
 }
 
 .linha1 {
-  margin-top: 2vh;
-  height: 6px;
+  margin-top: 1vmax;
+  height: 1vmin;
   width: 37vw;
   background-color: white;
 }
 
 .linha2 {
-  margin-top: 2vh;
-  height: 6px;
+  margin-top: 1vmax;
+  height: 1vmin;
   width: 37vw;
   background-color: white;
 }
 
 .linha3 {
   margin-bottom: 5.5vh;
-  height: 6px;
-  width: 94.7vw;
+  height: 1vmin;
+  width: 94.7vmax;
   background-color: white;
 }
 
 .P {
-  box-sizing: border-box;
   display: inline-block;
   background-color: white;
   width: 22.6vw;
-  height: 77vh;
+  height: 35.6vmax;
   padding: 1.75vh 0vw 4.25vh 0.83vw;
-  margin-bottom: 30px;
+  margin-bottom: 5vh;
 }
 
 .IMGprodutos {
-  width: 95%;
-  height: 82%;
+  width: 21vw;
+  height: 28vmax;
+  overflow-x: hidden;
 }
 
 .Text-tipo {
@@ -339,18 +342,22 @@ h1 {
   color: black;
 }
 
+/*Banner secundario*/
+
 .bannerNEW {
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
+/*Rodapé que é igual em todas as paginas*/
+
 .informacaoGERAL {
-   overflow-x: hidden;
-   margin: 1.625vh 2.78vw 3.25vh 2.78vw;
-  
+  overflow-x: hidden;
+  margin: 1.625vh 2.78vw 2.25vh 2.78vw;
 }
+
+/*Parte das garantias*/
 
 .garantias {
   width: 100%;
@@ -360,7 +367,6 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1vh;
-  box-sizing: border-box;
 }
 
 .garantia {
@@ -398,6 +404,7 @@ h1 {
   color: #4e4e4e;
 }
 
+/*Informações gerais no site*/
 
 .informacoes {
   display: flex;
@@ -419,8 +426,8 @@ h1 {
   margin-top: 0.8vh;
   width: 14.51vw;
   height: 4.43vh;
-  padding: 2.5vh 0.6vw 1vw;
-  font-size:  1.11vw;
+  padding: 1vmax 0.6vw 1vmax;
+  font-size: 1.11vmax;
   color: #5c5c5c;
   background-color: #f9f9fc;
   border: 1px solid #ccc;
@@ -452,7 +459,6 @@ h1 {
   margin-bottom: 1vh;
 }
 
-
 footer {
   grid-area: footer;
   background: var(--cor-de-fundo);
@@ -460,25 +466,31 @@ footer {
 }
 
 .copyright {
-    background: var(--cor-principal);
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    height: 9vh;
-    color: white;
-    font-size: 2.22vh;
+  background: var(--cor-principal);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 9vh;
+  color: white;
+  font-size: 2.22vh;
 }
+
+/*Detalhes para responsividade*/
 
 @media (max-width: 768px) {
    
+  body {
+    overflow-x: hidden;
+  }
+
   header {
      height: 9.7vh;
   }
 
   .logo-quadrado {
-  margin-top: -6vh;
-  position: relative;
+    margin-top: -6vh;
+    position: relative;
   }
 
   .fundo {
@@ -586,6 +598,151 @@ footer {
     height: 35vw;
   }
   
+  .separar {
+    height: 1.3vh;
+  }
+
+  .produtos-geral {
+    margin-top: 3vh;
+  }
+
+  .produtos {
+    margin-left: 5%;
+  }
+
+  h1 {
+    font-size: 3vw;
+    margin-bottom: 2vh;
+  }
+
+  .linha1 {
+    margin-top: 1vmax;
+    height: 0.8vmin;
+    width: 33vw;
+  }
+
+  .linha2 {
+    margin-top: 1vmax;
+    height: 0.8vmin;
+    width: 33vw;
+  }
+
+  .linha3 {
+    margin-bottom: 3vh;
+    height: 0.8vmin;
+    width: 92.7vw;
+  }
+
+  .P {
+    width: 43vw;
+    height: 64.6vmax;
+    padding: 2vh 0vw 0vh 1.5vw;
+    margin-bottom: 3vh;
+  }
+
+  .IMGprodutos {
+    width: 40vw;
+    height: 50vmax;
+  }
+
+  .Text-tipo {
+    font-size: 2.22vw;
+    margin-top: 0.6vh;
+  }
+
+  .Text-valor {
+    font-size: 3.48vw;
+    margin-top: 0.5vh;
+  }
+
+  .Text-parcela{
+    font-size: 2.22vw;
+  }
+
+  .garantias {
+    height: 21.47vmax;
+    margin-bottom: 1vh;
+    flex-wrap: wrap;
+  }
+
+  .garantias img {
+    width: 12vw;
+    height: auto;
+  }
+
+  .garantia4 {
+    margin-right: 3vw;
+  }
+
+  .garantia2 .texto_garantias {
+    max-width: 26vw;
+    margin-right: 3vw;
+  }
+
+  .texto_garantias { 
+    max-width: 30vw;
+  }
+
+  .garantia4 .texto_garantias {
+    max-width: 26vw;
+  }
+
+  .garantia3 .texto_garantias {
+    margin-left: 0.4vw;
+    display: flex;
+    flex-direction: column;
+    max-width: 32vw;
+  }
+
+  .garantias h2 {
+    font-size: 1.8vw;
+    margin-bottom: 0.3vh;
+  }
+
+  .garantia p {
+    font-size: 1.8vw;
+  }
+
+  .informacoes {
+    height: 36vmax;
+    padding-left: 3.3vw;
+    column-gap: 15vw;
+    row-gap: 0;
+    flex-wrap: wrap;
+  }
+
+  .info2 {
+    margin-left: 14.3vmax;
+    column-gap: 0;
+  }
+
+  .informacoes h2 {
+    font-size: 2.3vmax;
+    margin-bottom: 0.7vh;
+  }
+
+  .newsletter_email input {
+    margin-top: 0.3vh;
+    width: 27.51vw;
+    font-size: 2.22vmax;
+  }
+
+  .newsletter_email input::placeholder {
+    font-size: 2.2vmax;
+  }
+
+  .button_letter {
+    margin-top: 0.9vw;
+    padding: 1.1vh 1.2vmax;
+    font-size: 1.5vmax;
+    border-radius: 2px;
+  }
+
+  .informacoes p {
+    font-size: 2vmax;
+    margin-bottom: 1vh;
+  }
+
   .copyright {
     font-size: 1.8vh;
     padding: 1vh;
@@ -594,15 +751,6 @@ footer {
   footer p {
     font-size: 2vmax;
   }
-
-  .informacoes {
-   flex-wrap: wrap;
-   height: 45vh;
-}
-
-footer {
-  height: 78vh;
-}
 
 }
 
@@ -617,18 +765,18 @@ footer {
   }
 
   .fundo {
-    height: 5.7vh;
+    height: 5.7vmax;
   }
 
   .logo {
-    height: 8vh;
-    left: 1.8vw;
-    top: 0.6vh;
+    height: 8vmax;
+    left: 1.8vmax;
+    top: 0.9vmax;
   }
 
   .logo-fundo {
-    width: 30vw;
-    height: 10vh;
+    width: 33vmin;
+    height: 11vmax;
   }
 
   .barra-pesquisa input[type="text"] {          
@@ -654,6 +802,10 @@ footer {
     font-size: 2.5vw;
   }
 
+  ul li ul.submenu {
+    margin-top: 1.3vw;
+  }
+
   ul li label:not(.opcaoC) {
     margin-left: 3.4vw;
   }
@@ -667,9 +819,105 @@ footer {
   ul li input[type="checkbox"]:checked + label i {
   transform: rotate(180deg);
   margin-top: 0.3vh;
-}
+  }
 
-.copyright {
+  .separar {
+    height: 1.3vh;
+  }
+
+  .produtos-geral {
+    margin-top: 2vh;
+  }
+
+  .produtos {
+    margin-left: 6%;
+  }
+
+  h1 {
+    font-size: 4vw;
+    padding: 0 1vw 0 1vw ;
+    margin-bottom: 2vh;
+  }
+
+  .linha1 {
+    margin-top: 1vh;
+    width: 30vw;
+  }
+
+  .linha2 {
+    margin-top: 1vh;
+    width: 30vw;
+  }
+
+  .linha3 {
+    margin-bottom: 3vh;
+    height: 3px;
+  }
+
+  .P {
+    width: 43vw;
+    height: 44vmax;
+    padding: 1.5vh 0vw 0vh 1.5vw;
+    margin-bottom: 2vh;
+  }
+
+  .IMGprodutos {
+    height: 35vmax;
+  }
+
+  .Text-tipo {
+    margin-top: 0.2vh;
+  }
+
+  .garantias {
+    height: 24.47vmax;
+  }
+
+  .garantias img {
+    width: 14vw;
+  }
+
+  .garantias h2 {
+    font-size: 2.5vw;
+  }
+
+  .garantia p {
+    font-size: 3vw;
+  }
+
+  .informacoes {
+    height: 32vmax;
+    column-gap: 5vw;
+  }
+
+  .info2 {
+    margin-left: 11.5vmax;
+  }
+
+  .informacoes h2 {
+    font-size: 1.6vmax;
+  }
+
+  .newsletter_email input {
+    margin-top: 0vh;
+    width: 33.51vw;
+    font-size: 1.7vmax;
+  }
+
+  .newsletter_email input::placeholder {
+    font-size: 1.7vmax;
+  }
+
+  .button_letter {
+    margin-top: 0.7vh;
+    font-size: 1.3vmax;
+  }
+
+  .informacoes p {
+    font-size: 1.5vmax;
+  }
+
+  .copyright {
     font-size: 1.5vh;
     padding: 0;
   }

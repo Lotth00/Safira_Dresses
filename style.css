@@ -12,30 +12,38 @@
 }
 
 html, body {
-    font-family: 'Kelly Slab', cursive;
-    height: 100%;
-    overflow-x: hidden;
+  font-family: 'Kelly Slab', cursive;
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .container {
-    display: grid;
-    grid-template-areas: "header header" 
-                         "main main"
-                         "footer footer";
-    min-height: 100vh;
-    grid-template-columns: auto 1fr auto;
+  display: grid;
+  grid-template-areas: "header header" 
+                       "main main"
+                       "footer footer";
+  min-height: 100vh;
+  grid-template-columns: auto 1fr auto;
+  background: var(--cor-de-fundo);
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 /*Cabeçalho igual para todas as paginas*/
 
-header {
-     grid-area: header;
-     height: 13.7vh;
-     z-index: 2;
+header { 
+  grid-area: header;
+  background-color: white;
+  height: 13.7vh;
+  z-index: 999;
 }
 
 .parte-superior {
-    position: relative;
+  position: relative;
 }
 
 .logo-quadrado {
@@ -43,10 +51,30 @@ header {
   position: relative;
 }
 
+.icone-user, .icone-bag {
+  width: 3.3vh;
+  height: auto;
+  cursor: pointer;
+}
+
+.icone-search {
+  margin-right: 8.7vw;
+  width: 3.3vh;
+  height: 100%;
+}
+
+.header-icones {
+  position: absolute;
+  top: 3.2vh;
+  right: 2vw;
+  display: flex;
+  gap: 0.8vw; 
+}
+
 .fundo {
-    background-color: var(--cor-principal);
-    height: 8.78vh;
-    z-index: -1;
+  background-color: var(--cor-principal);
+  height: 8.78vh;
+  z-index: -1;
 }
 
 .barra-pesquisa {
@@ -93,17 +121,24 @@ header {
 /*Parte do Menu*/
 
 .menu {
-    margin-top: 9.3vmin;
-    margin-left:  7.81vmax;
-    margin-right: 7.14vmax;
-    white-space: nowrap;
-    max-width: 100%;
+  margin-top: 9.3vmin;
+  margin-left:  7.81vmax;
+  margin-right: 7.14vmax;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.separacao {
+  position: relative;
+  z-index: 2;
+  background-color: #B3B4D2;
+  height: 0.5vh;
 }
 
 i {
   position: absolute;
   color: #727070;
-  font-size: 1.4vw;
+  font-size: 1.4vmax;
   margin-top: 1vh;
   margin-left: 0.5vw;
 }
@@ -114,50 +149,50 @@ ul li input[type="checkbox"]:checked + label i {
 }
 
 ul {
-    list-style: none;
-    background-color: white;
-    margin-top: 0.3vh;
-    text-align: end;
+  list-style: none;
+  background-color: white;
+  margin-top: 0.3vh;
+  text-align: end;
 }
 
 ul li {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 }
 
 ul li a {
-    display: block;
-    color: #4D4D4D;
-    text-decoration: none;
-    text-align: start;
-    font-size: 1.25rem;
-    padding-left: 0.5vw;
+  display: block;
+  color: #4D4D4D;
+  text-decoration: none;
+  text-align: start;
+  font-size: 1.25rem;
+  padding-left: 0.5vw;
 }
 
 ul li input[type="checkbox"] {
-    visibility: hidden;
-    display: none;
+  visibility: hidden;
+  display: none;
 }
 
 ul li label:not(.opcaoC) {
-    cursor: pointer;
-    display: block;
-    text-decoration: none;
-    margin-left: 11vw;
-    color: #383838;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  margin-left: 11vw;
+  color: #383838;
 }
 
 .opcaoQ {
-    font-size: 1.5vw;
+  font-size: 1.5vmax;
 }
 
 .opcaoC {
-    margin-left: 6vw;
-    cursor: pointer;
-    display: block;
-    text-decoration: none;
-    font-size: 1.5vw;
-    color: #383838;
+  margin-left: 6vw;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  font-size: 1.5vmax;
+  color: #383838;
 }
 
 /*Parte do Submenu*/
@@ -175,23 +210,23 @@ ul li ul.submenu {
 }
 
 #acessorios, #colecoes {
-    margin-left: 12vw;
+  margin-left: 12vw;
 }
 
 #promocoes {
-    margin-left: 7.28vw;
+  margin-left: 7.28vw;
 }
 
 ul li ul.submenu li {
-    display: block;
+  display: block;
 }
 
 ul li:not(.opcaomenu):hover{
-    background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 ul li:hover ul.submenu {
-    display: block;
+  display: block;
 }
 
 ul li input[type="checkbox"] + label + ul.submenu {
@@ -207,17 +242,18 @@ ul li input[type="checkbox"]:checked + label + ul.submenu {
 /*Main: aqui é diferente para cada pagina, porém o mais usado são o layout dos produtos.*/
 
 main {
-    grid-area: main;
-    background: var(--cor-de-fundo);
+  grid-area: main;
+  background: var(--cor-de-fundo);
 }
 
 /*Parte do primeiro banner que direciona para outras paginas*/
 .banner-principal {
-  top: 0.4vh;
+  top: 0;
   width: 100%;
   height: 35vw;
   overflow: hidden;
   position: relative;
+  z-index: 0;
   background-color: #0000007e;
 }
 
@@ -231,6 +267,7 @@ main {
   background-size: cover;
   background-position: center;
   opacity: 0;
+  pointer-events: none;
   animation: fadeSlide 15s infinite;
   animation-timing-function: ease-in-out;
 }
@@ -251,11 +288,11 @@ main {
 }
 
 @keyframes fadeSlide {
-  0%   { opacity: 0; }   /* invisível */
-  10%  { opacity: 1; }   /* começa a aparecer */
-  30%  { opacity: 1; }   /* ainda visível */
-  50%  { opacity: 0; }  
-  100% { opacity: 0; }   /* invisível de novo */
+  0%   { opacity: 0; pointer-events: none;}   /* invisível */
+  10%  { opacity: 1; pointer-events: auto;}   /* começa a aparecer */
+  30%  { opacity: 1; pointer-events: auto;}   /* ainda visível */
+  50%  { opacity: 0; pointer-events: none;}  
+  100% { opacity: 0; pointer-events: none; }   /* invisível de novo */
 }
 
 /*Parte dos produtos*/
@@ -460,6 +497,7 @@ h1 {
 }
 
 footer {
+  align-content: flex-end;
   grid-area: footer;
   background: var(--cor-de-fundo);
   width: 100%;  
@@ -493,6 +531,19 @@ footer {
     position: relative;
   }
 
+  .icone-search, .icone-user, .icone-bag {
+    width: 2.3vh;
+  }
+
+  .icone-search {
+    margin-right: 8.5vw;
+  }
+
+  .header-icones {
+    top: 2.5vmin;
+    row-gap: 0.9vw; 
+  }
+
   .fundo {
     height: 6.3vh;
   }
@@ -518,7 +569,7 @@ footer {
     max-width: 100%;
     padding: 0 0.6rem;
     font-size: 0.6rem;
-    margin-right: 17vw;
+    margin-right: 15.5vw;
     padding: 0 4vw 0 24vw;
     box-sizing: border-box;
   }
@@ -777,6 +828,18 @@ footer {
   .logo-fundo {
     width: 33vmin;
     height: 11vmax;
+  }
+
+  .icone-search, .icone-user, .icone-bag {
+    width: 2vh;
+  }
+
+  .icone-search {
+    margin-right: 7vw;
+  }
+
+  .header-icones {
+    top: 3.5vmin;
   }
 
   .barra-pesquisa input[type="text"] {          

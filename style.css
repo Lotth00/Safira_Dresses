@@ -331,14 +331,7 @@ main {
   margin-right: 2.22vw;
 }
 
-.linha1 {
-  margin-top: 1vmax;
-  height: 1vmin;
-  width: 37vw;
-  background-color: white;
-}
-
-.linha2 {
+.linha1, .linha2 {
   margin-top: 1vmax;
   height: 1vmin;
   width: 37vw;
@@ -356,7 +349,7 @@ main {
   display: inline-block;
   background-color: white;
   width: 22.6vw;
-  height: 35.6vmax;
+  height: 36.6vmax;
   padding: 1.75vh 0vw 4.25vh 0.83vw;
   margin-bottom: 5vh;
 }
@@ -536,7 +529,7 @@ footer {
 
 .quadrado1 {
   padding: 1.5vw;
-  background-color: #ffffffe3;
+  background-color: #FFFFFFCC;
   width: 33vw;
   height: 68.5vmin;
   border-radius: 5px;
@@ -595,6 +588,7 @@ footer {
   border-radius: 5px;
   align-content: center;
   justify-items: center;
+  cursor: pointer;
 }
 
 .divisao_botao {
@@ -621,6 +615,7 @@ footer {
   height: 6vh;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .botao_entrarG img {
@@ -630,7 +625,7 @@ footer {
 }
 
 .quadrado2 {
-  background-color: #ffffffe3;
+  background-color: #FFFFFFCC;
   padding: 1.5vw 1.1vw;
   width: 26vw;
   height: 39.8vmin;
@@ -664,19 +659,19 @@ footer {
 .d1 {
   height: 4.7vh;
   width: 18.4vw;
-  background-color: #ffffffe3;
+  background-color: #FFFFFFCC;
 }
 
 .d2 {
   height: 4vh;
   width: 10.10vw;
-  background-color: #ffffffe3;
+  background-color: #FFFFFFCC;
 }
 
 .d3 {
   height: 4vh;
   width: 5.10vw;
-  background-color: #ffffffe3;
+  background-color: #FFFFFFCC;
 }
 
 /*Pagina especifica: Criar_conta*/
@@ -692,7 +687,7 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 1.5vw;
-  background-color: #ffffffe3;
+  background-color: #FFFFFFCC;
   width: 33vw;
   height: 108vmin;
   border-radius: 5px;
@@ -776,7 +771,7 @@ footer {
 .quadradoMarca {
   display: flex;
   padding: 1.5vw 2vw;
-  background-color: #ffffffe3;
+  background-color: #FFFFFFCC;
   width: 95vw;
   height: 130vh;
   border-radius: 5px;
@@ -823,7 +818,7 @@ footer {
 
 .Squadrado1 {
   padding: 1.5vw;
-  background-color: #ffffffe3;
+  background-color: #FFFFFFCC;
   width: 56vw;
   height: 73.5vh;
   border-radius: 5px;
@@ -831,7 +826,7 @@ footer {
 
 .Squadrado2 {
   padding: 1.5vw;
-  background-color: #ffffffe3;
+  background-color: #FFFFFFCC;
   width: 35vw;
   height: 73.5vh;
   border-radius: 5px;
@@ -842,12 +837,36 @@ footer {
   align-items: center;
   gap: 0.5vw;
   flex-wrap: nowrap;
+  margin-bottom: 4.3vh;
+}
+
+.Stitulo h1 {
+  font-size: 2.4vmax;
+}
+
+.Stitulo p {
+  font-size: 1.4vmax;
+  margin-top: 0.6vh;
 }
 
 .Meta {
   display: flex;
   align-items: center;
   gap: 0.5vw;
+  margin-bottom: 1.3vh;
+}
+
+.Meta p {
+  font-size: 1.4vmax;
+}
+
+.detalheMETA {
+  text-shadow: 
+    -0.3px -0.3px 0 black,  
+     0.3px -0.3px 0 black,
+    -0.3px  0.3px 0 black,
+     0.3px  0.3px 0 black;
+  margin-left: 0.3vw;
 }
 
 .MetaProgresso {
@@ -856,8 +875,13 @@ footer {
   align-items: center;
 }
 
+.MetaProgresso p {
+  font-size: 1vmax;
+  color: #000000a2;
+}
+
 .barra_progresso {
-  width: 90%;
+  width: 100%;
   height: 1.5vh;
   background-color: #ffffff;
   border-radius: 5px;
@@ -867,17 +891,30 @@ footer {
 
 .MetaTexto {
   justify-items: center;
-  font-size: 1.2vw;
+  font-size: 1.4vmax;
+  color: #000000c7;
+  margin-top: 6vh;
 }
 
 .Subtotal {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1.5vh;
+}
+
+.Subtotal p{
+  font-size: 1.5vmax;
 }
 
 .TotalImpostos {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1.5vh;
+}
+
+.TotalImpostos p {
+  font-size: 1vmax;
+  color: #000000a2;
 }
 
 .divisao_subtotal {
@@ -891,6 +928,12 @@ footer {
 .TotalEstimado {
   display: flex;
   justify-content: space-between;
+  margin-top: 0.9vh;
+  margin-bottom: 5vh;
+}
+
+.TotalEstimado p {
+  font-size: 1.5vmax;
 }
 
 .botao_checkout {
@@ -903,6 +946,9 @@ footer {
   height: 6vh;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  margin-bottom: 2.7vh;
+  margin-top: 3.5vh;
 }
 
 .botao_checkout img {
@@ -914,8 +960,92 @@ footer {
 }
 
 .DetalheINFO_texto {
+  font-size: 0.9vmax;
+  color: #000000a2;
   justify-items: center;
 }
+
+.DetalheINFO_texto p {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+/*Paginas em alteração: Produtos*/
+
+.valor-container {
+  display: flex;
+  gap: 0.8vw;
+}
+
+.valor-cortado {
+  font-size: 1.2vmax;
+  color: #000000a2;
+  text-decoration: line-through;
+  margin-top: 2vh;
+}
+
+.linha1_L, .linha2_L, .linha1_C, .linha2_C, .linha1_M, .linha2_M, .linha1_CA, .linha2_CA, .linha1_PS, .linha2_PS, .linha1_CI, .linha2_CI, .linha2_C, .linha1_M, .linha2_M, .linha1_CA, .linha2_CA, .linha1_PS, .linha2_PS, .linha1_BO, .linha2_BO, .linha1_J, .linha2_J, .linha1_E, .linha2_E, .linha1_I, .linha2_I, .linha1_LS, .linha2_LS, .linha1_N, .linha2_N, .linha1_CL, .linha2_CL, .linha1_T, .linha2_T {
+  margin-top: 1vmax;
+  height: 1vmin;
+  background-color: white;
+} 
+
+.linha1_L, .linha2_L {
+  width: 40vw;
+}
+
+.linha1_C, .linha2_C {
+  width: 40.2vw;
+}
+
+.linha1_M, .linha2_M {
+  width: 40.5vw;
+}
+
+.linha1_CA, .linha2_CA {
+  width: 37.55vw;
+}
+
+.linha1_PS, .linha2_PS {
+  width: 40.6vw;
+}
+
+.linha1_CI, .linha2_CI {
+  width: 42.1vw;
+}
+
+.linha1_BO, .linha2_BO {
+  width: 42vw;
+}
+
+.linha1_J, .linha2_J {
+  width: 42.7vw;
+}
+
+.linha1_E, .linha2_E {
+  width: 35.7vw;
+}
+
+.linha1_I, .linha2_I {
+  width: 35.55vw;
+}
+
+.linha1_LS, .linha2_LS {
+  width: 37.8vw;
+}
+
+.linha1_N, .linha2_N {
+  width: 41.05vw;
+}
+
+.linha1_CL, .linha2_CL {
+  width: 37.65vw;
+}
+
+.linha1_T, .linha2_T {
+  width: 37.7vw;
+}
+
 
 /*Detalhes para responsividade*/
 
@@ -989,7 +1119,7 @@ footer {
     font-size: 2.6vw;
     margin-left: 1vh;
     padding-left: 0.5vw;
-    height: 6vh;
+    height: 5.4vh;
   }
 
   .opcaoC {
@@ -1020,7 +1150,7 @@ footer {
   }
 
   ul li ul.submenu:not(#categorias, #promocoes, #colecoes) {
-    margin-left: 0;
+    margin-left: 8.4vw;
     line-height: 4.5vh;
     max-width: 120px;
   }
@@ -1064,18 +1194,12 @@ footer {
     margin-left: 5%;
   }
 
-  h1 {
+  .titulo-produto h1 {
     font-size: 3vw;
     margin-bottom: 2vh;
   }
 
-  .linha1 {
-    margin-top: 1vmax;
-    height: 0.8vmin;
-    width: 33vw;
-  }
-
-  .linha2 {
+  .linha1, .linha2 {
     margin-top: 1vmax;
     height: 0.8vmin;
     width: 33vw;
@@ -1089,14 +1213,14 @@ footer {
 
   .P {
     width: 43vw;
-    height: 64.6vmax;
+    height: 59.6vmax;
     padding: 2vh 0vw 0vh 1.5vw;
     margin-bottom: 3vh;
   }
 
   .IMGprodutos {
     width: 40vw;
-    height: 50vmax;
+    height: 45vmax;
   }
 
   .Text-tipo {
@@ -1383,6 +1507,165 @@ footer {
     margin-bottom: 2vh;
   }
 
+  .container_Sacola {
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+    flex-wrap: wrap;
+  }
+
+  .Squadrado1 {
+    padding: 1.5vw;
+    width: 52vw;
+    height: 60vh;
+  }
+
+  .Squadrado2 {
+    padding: 1.5vw;
+    width: 39vw;
+    height: 60vh;
+  }
+
+  .Stitulo {
+    margin-bottom: 1.3vh;
+  }
+
+  .Stitulo h1 {
+    font-size: 2.8vmax;
+  }
+
+  .Stitulo p {
+    font-size: 1.6vmax;
+    margin-top: -1vh;
+  }
+
+  .Meta {
+    margin-bottom: 1.3vh;
+  }
+
+  .Meta p {
+    font-size: 1.8vmax;
+  }
+
+  .MetaProgresso p {
+    font-size: 1.6vmax;
+  }
+
+  .MetaTexto {
+    font-size: 1.8vmax;
+    margin-top: 4vh;
+    text-align: center;
+  }
+
+  .Subtotal {
+    margin-bottom: 1.5vh;
+  }
+
+  .Subtotal p{
+    font-size: 2vmax;
+  }
+
+  .TotalImpostos {
+    margin-bottom: 1.5vh;
+  }
+
+  .TotalImpostos p {
+    font-size: 1.6vmax;
+  }
+
+  .Media_excessao {
+    text-align: end;
+  }
+
+  .TotalEstimado {
+    margin-bottom: 3vh;
+  }
+
+  .TotalEstimado p {
+    font-size: 2vmax;
+  }
+
+  .botao_checkout {
+    font-size: 1.45vmax;
+    height: 5vh;
+    margin-bottom: 2.7vh;
+    margin-top: 2.5vh;
+  }
+
+  .DetalheINFO_texto {
+    text-align: center;
+    font-size: 1.3vmax;
+  }
+
+  .DetalheINFO_texto p {
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+  }
+
+  .valor-cortado {
+    font-size: 1.8vmax;
+    margin-top: 1.5vh;
+  }
+
+  .linha1_L, .linha2_L, .linha1_C, .linha2_C, .linha1_M, .linha2_M, .linha1_CA, .linha2_CA, .linha1_PS, .linha2_PS, .linha1_CI, .linha2_CI, .linha1_BO, .linha2_BO, .linha1_J, .linha2_J, .linha1_E, .linha2_E, .linha1_I, .linha2_I, .linha1_LS, .linha2_LS, .linha1_N, .linha2_N, .linha1_CL, .linha2_CL, .linha1_T, .linha2_T {
+    height: 0.8vmin;
+  }
+
+  .linha1_L, .linha2_L {
+    width: 36vw;
+  }
+
+  .linha1_C, .linha2_C {
+    width: 36.2vw;
+  }
+
+  .linha1_M, .linha2_M {
+    width: 36.5vw;
+  }
+
+  .linha1_CA, .linha2_CA {
+    width: 32.4vw;
+  }
+
+  .linha1_PS, .linha2_PS {
+    width: 36.63vw;
+  }
+
+  .linha1_CI, .linha2_CI {
+    width: 39vw;
+  }
+
+  .linha1_BO, .linha2_BO {
+    width: 38.9vw;
+  }
+
+  .linha1_J, .linha2_J {
+    width: 39.8vw;
+  }
+
+  .linha1_E, .linha2_E {
+    width: 29.9vw;
+  }
+
+  .linha1_I, .linha2_I {
+    width: 29.7vw;
+  }
+
+  .linha1_LS, .linha2_LS {
+    width: 32.8vw;
+  }
+
+  .linha1_N, .linha2_N {
+    width: 37.6vw;
+  }
+
+  .linha1_CL, .linha2_CL {
+    width: 32.7vw;
+  }
+
+  .linha1_T, .linha2_T {
+    width: 32.75vw;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -1464,6 +1747,10 @@ footer {
   margin-top: 0.3vh;
   }
 
+  ul li ul.submenu:not(#categorias, #promocoes, #colecoes) {
+    margin-left: 5.4vw;
+  }
+
   .separar {
     height: 1.3vh;
   }
@@ -1476,18 +1763,13 @@ footer {
     margin-left: 6%;
   }
 
-  h1 {
+  .titulo-produto h1 {
     font-size: 4vw;
     padding: 0 1vw 0 1vw ;
     margin-bottom: 2vh;
   }
 
-  .linha1 {
-    margin-top: 1vh;
-    width: 30vw;
-  }
-
-  .linha2 {
+  .linha1, .linha2 {
     margin-top: 1vh;
     width: 30vw;
   }
@@ -1499,13 +1781,13 @@ footer {
 
   .P {
     width: 43vw;
-    height: 44vmax;
+    height: 40vmax;
     padding: 1.5vh 0vw 0vh 1.5vw;
     margin-bottom: 2vh;
   }
 
   .IMGprodutos {
-    height: 35vmax;
+    height: 30vmax;
   }
 
   .Text-tipo {
@@ -1692,6 +1974,113 @@ footer {
   .textoMarca p {
     font-size: 1.5vmax;
     margin-bottom: 1.5vh;
+  }
+
+   .container_Sacola {
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+    flex-wrap: wrap;
+  }
+
+  .Squadrado1 {
+    padding: 2.5vw;
+    width: 85vw;
+    height: 48vh;
+  }
+
+  .Squadrado2 {
+    padding: 2.5vw;
+    width: 85vw;
+    height: 48vh;
+  }
+
+  .Stitulo {
+    margin-bottom: 1vh;
+  }
+
+  .Stitulo h1 {
+    margin-left: -1vw;
+  }
+
+  .Subtotal p{
+    font-size: 2.3vmax;
+  }
+
+  .TotalImpostos p {
+    font-size: 1.8vmax;
+  }
+
+  .TotalEstimado {
+    margin-bottom: 3vh;
+  }
+
+  .TotalEstimado p {
+    font-size: 2.3vmax;
+  }
+
+  .DetalheINFO_texto {
+    font-size: 1.5vmax;
+  }
+
+  .valor-cortado {
+    font-size: 1.4vmax;
+    margin-top: 1.05vh;
+  }
+
+  .linha1_L, .linha2_L {
+    width: 34vw;
+  }
+
+  .linha1_C, .linha2_C {
+    width: 34.2vw;
+  }
+
+  .linha1_M, .linha2_M {
+    width: 34.6vw;
+  }
+
+  .linha1_CA, .linha2_CA {
+    width: 29.15vw;
+  }
+
+  .linha1_PS, .linha2_PS {
+    width: 34.9vw;
+  }
+
+  .linha1_CI, .linha2_CI {
+    width: 37.6vw;
+  }
+
+  .linha1_BO, .linha2_BO {
+    width: 37.5vw;
+  }
+
+  .linha1_J, .linha2_J {
+    width: 38.5vw;
+  }
+
+  .linha1_E, .linha2_E {
+    width: 25.5vw;
+  }
+
+  .linha1_I, .linha2_I {
+    width: 25.3vw;
+  }
+
+  .linha1_LS, .linha2_LS {
+    width: 29.5vw;
+  }
+
+  .linha1_N, .linha2_N {
+    width: 35.6vw;
+  }
+
+  .linha1_CL, .linha2_CL {
+    width: 29.4vw;
+  }
+
+  .linha1_T, .linha2_T {
+    width: 29.5vw;
   }
 
 }
